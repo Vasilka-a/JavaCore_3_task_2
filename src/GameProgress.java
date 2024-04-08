@@ -51,7 +51,7 @@ public class GameProgress implements Serializable {
     public void saveGame(GameProgress gameProgress, String addressFile) {
         try (FileOutputStream fos = new FileOutputStream(addressFile);
              ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-            oos.writeObject(gameProgress);
+             oos.writeObject(gameProgress);
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         } catch (IOException e) {
